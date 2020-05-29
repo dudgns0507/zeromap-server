@@ -1,0 +1,12 @@
+
+version: '2'
+
+services:
+  zeromap-server:
+    container_name: zeromap-server
+    image: zeromap-server:latest
+    ports:
+      - 3012:5000
+    volumes:
+      - /home/parkyounghun/Documents/zeromap-server/:/app/
+

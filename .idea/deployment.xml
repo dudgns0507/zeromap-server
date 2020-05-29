@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="parkyounghun@220.72.167.113:22" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="parkyounghun@220.72.167.113:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/parkyounghun/Documents/zeromap-server" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="parkyounghun@220.72.167.113:22 (1)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/parkyounghun/Documents/zeromap-server" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="parkyounghun@220.72.167.113:22 (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/parkyounghun/Documents/zeromap-server" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@203.245.29.50:22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@222.122.202.215:22">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
