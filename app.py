@@ -30,6 +30,10 @@ def dump(obj):
 
 @app.route('/')
 def hello_world():
+    log = Log()
+    log.ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
+    add(db.session, log)
+
     return render_template('index.html')
 
 
@@ -59,6 +63,7 @@ def api_store():
 
 @app.route('/api/search/store', methods=['POST'])
 def api_search_store():
+    category_list = ["카페", "편의점/마트", "음식점", "디저트", "병원/약국", "의류"]
     list = [
         ["비알코올 음료점업"],
         ["음ㆍ식료품 위주 종합 소매업", "식료품 소매업", "서적 및 문구용품 소매업", "신선 식품 및 단순 가공 식품 도매업"],
@@ -81,24 +86,13 @@ def api_search_store():
         cArr.append("")
     else:
         for i in range(0, len(c)):
-            type = 0
-            if c[i] == "카페":
-                type = 0
-            elif c[i] == "편의점/마트":
-                type = 1
-            elif c[i] == "음식점":
-                type = 2
-            elif c[i] == "디저트":
-                type = 3
-            elif c[i] == "병원/약국":
-                type = 4
-            elif c[i] == "의류":
-                type = 5
+            try:
+                type = category_list.index(c[i])
+            except ValueError:
+                continue
 
             for j in range(0, len(list[type])):
                 cArr.append(list[type][j])
-
-    print(cArr)
 
     for i in range(0, len(qArr)):
         qArr[i] = "%" + qArr[i] + "%"

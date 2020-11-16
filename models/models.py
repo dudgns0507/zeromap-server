@@ -69,5 +69,23 @@ class ReportSchema(Schema):
         )
 
 
+class Log(db.Model):
+    __tablename__ = 'log'
+    __table_args__ = {'mysql_collate': 'utf8_general_ci'}
+
+    id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)
+    ip = db.Column(db.Text)
+    created_date = db.Column(db.DateTime, server_default=FetchedValue())
+
+
+class LogSchema(Schema):
+    class Meta:
+        fields = (
+            "id",
+            "ip",
+            "created_date"
+        )
+
+
 def init_app(app):
     db.init_app(app)
